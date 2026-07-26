@@ -2,7 +2,7 @@
   "uuid": "hover-swipe-select@amgad",
   "name": "Hover Swipe Select",
   "description": "In the Activities Overview, hover a window thumbnail with the touchpad and do a 3-finger swipe down to select and focus that window — like macOS Mission Control — instead of clicking it. When the swipe does not start over a window, GNOME's normal overview gestures are left untouched.",
-  "shell-version": ["46"],
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
   "url": "https://github.com/Amgadezzat-andro/hover-swipe-select",
   "version-name": "1.0"
 }

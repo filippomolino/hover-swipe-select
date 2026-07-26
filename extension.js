@@ -26,6 +26,19 @@
 // object and is never touched, so left/right swipes keep working normally. If the
 // swipe does NOT begin over a window, we don't interfere at all and GNOME's default
 // behaviour (down = leave overview, up = app grid) is untouched.
+//
+// Compatibility (verified against GNOME Shell 45 → 50 source)
+// ----------------------------------------------------------
+// - Main.overview._swipeTracker (the vertical overview SwipeTracker), its `enabled`
+//   property, and the `enabled`→touchpad-gesture binding exist in all of 45-50, so
+//   `_swipeTracker.enabled = false` reliably silences it everywhere.
+// - WindowPreview.metaWindow, get_gesture_motion_delta_unaccelerated (with a plain
+//   get_gesture_motion_delta fallback), and Main.activateWindow are stable across
+//   all six releases.
+// - On 45-48 the shell listens on `global.stage` "captured-event::touchpad"; on
+//   49-50 it moved to "event::touchpad" (bubble phase). Our handler stays on the
+//   stage's capture phase, which always runs first, so on 49-50 we also win the
+//   race outright — and disabling the tracker remains a valid safety net regardless.
 
 import Clutter from 'gi://Clutter';
 

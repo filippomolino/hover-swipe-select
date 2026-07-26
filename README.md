@@ -5,7 +5,7 @@ Overview**: instead of clicking a window thumbnail to pick it, just **hover** it
 with the touchpad and do a **3-finger swipe down** — that window is selected,
 focused, and the overview closes.
 
-![GNOME Shell 46](https://img.shields.io/badge/GNOME%20Shell-46-blue)
+![GNOME Shell 45–50](https://img.shields.io/badge/GNOME%20Shell-45–50-blue)
 
 ## What it does
 
@@ -27,7 +27,7 @@ other gesture untouched.
 
 ## Requirements
 
-- GNOME Shell **46**
+- GNOME Shell **45, 46, 47, 48, 49, or 50** (APIs verified against each release)
 - A touchpad that reports multi-finger swipe gestures (works on both Wayland and X11)
 
 ## Installation
